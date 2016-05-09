@@ -1,0 +1,26 @@
+<h2>Listing factions</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for faction <- @factions do %>
+    <tr>
+      <td><%= faction.name %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: faction_path(@conn, :show, faction), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: faction_path(@conn, :edit, faction), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: faction_path(@conn, :delete, faction), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New faction", to: faction_path(@conn, :new) %>

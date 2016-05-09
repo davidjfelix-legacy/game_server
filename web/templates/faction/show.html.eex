@@ -1,0 +1,13 @@
+<h2>Show faction</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @faction.name %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: faction_path(@conn, :edit, @faction) %>
+<%= link "Back", to: faction_path(@conn, :index) %>

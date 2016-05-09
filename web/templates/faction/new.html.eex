@@ -1,0 +1,6 @@
+<h2>New faction</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: faction_path(@conn, :create) %>
+
+<%= link "Back", to: faction_path(@conn, :index) %>
