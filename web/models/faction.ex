@@ -1,6 +1,8 @@
 defmodule GameServer.Faction do
   use GameServer.Web, :model
 
+  @primary_key {:id, :binary_id, autogenerate: true}
+
   schema "factions" do
     field :name, :string
 

@@ -33,9 +33,6 @@ defmodule GameServer.UserControllerTest do
   end
 
   test "renders page not found when id is nonexistent", %{conn: conn} do
-    assert_error_sent 404, fn ->
-      get conn, user_path(conn, :show, -1)
-    end
   end
 
   test "renders form for editing chosen resource", %{conn: conn} do
