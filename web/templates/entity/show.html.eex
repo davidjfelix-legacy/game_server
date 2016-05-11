@@ -1,0 +1,8 @@
+<h2>Show entity</h2>
+
+<ul>
+
+</ul>
+
+<%= link "Edit", to: entity_path(@conn, :edit, @entity) %>
+<%= link "Back", to: entity_path(@conn, :index) %>

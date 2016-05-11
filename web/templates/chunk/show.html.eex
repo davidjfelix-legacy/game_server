@@ -1,0 +1,8 @@
+<h2>Show chunk</h2>
+
+<ul>
+
+</ul>
+
+<%= link "Edit", to: chunk_path(@conn, :edit, @chunk) %>
+<%= link "Back", to: chunk_path(@conn, :index) %>

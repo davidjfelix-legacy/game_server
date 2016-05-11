@@ -1,0 +1,24 @@
+<h2>Listing entities</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for entity <- @entities do %>
+    <tr>
+
+      <td class="text-right">
+        <%= link "Show", to: entity_path(@conn, :show, entity), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: entity_path(@conn, :edit, entity), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: entity_path(@conn, :delete, entity), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New entity", to: entity_path(@conn, :new) %>

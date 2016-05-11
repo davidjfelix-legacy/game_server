@@ -1,0 +1,6 @@
+<h2>Edit chunk</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: chunk_path(@conn, :update, @chunk) %>
+
+<%= link "Back", to: chunk_path(@conn, :index) %>

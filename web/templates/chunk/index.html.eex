@@ -1,0 +1,24 @@
+<h2>Listing chunks</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for chunk <- @chunks do %>
+    <tr>
+
+      <td class="text-right">
+        <%= link "Show", to: chunk_path(@conn, :show, chunk), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: chunk_path(@conn, :edit, chunk), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: chunk_path(@conn, :delete, chunk), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New chunk", to: chunk_path(@conn, :new) %>
