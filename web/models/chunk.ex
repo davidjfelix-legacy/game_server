@@ -2,11 +2,12 @@ defmodule GameServer.Chunk do
   use GameServer.Web, :model
 
   schema "chunks" do
+    field :address, :string
 
     timestamps
   end
 
-  @required_fields ~w()
+  @required_fields ~w(address)
   @optional_fields ~w()
 
   @doc """

@@ -2,6 +2,11 @@
 
 <ul>
 
+  <li>
+    <strong>Address:<strong>
+    <%= @chunk.address %>
+  </li>
+
 </ul>
 
 <%= link "Edit", to: chunk_path(@conn, :edit, @chunk) %>

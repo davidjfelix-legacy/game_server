@@ -3,6 +3,7 @@ defmodule GameServer.Repo.Migrations.CreateChunk do
 
   def change do
     create table(:chunks) do
+      add :address, :string
 
       timestamps
     end

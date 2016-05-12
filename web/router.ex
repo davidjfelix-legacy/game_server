@@ -17,6 +17,8 @@ defmodule GameServer.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    resources "/chunks", ChunkController
+    resources "/entities", EntityController
     resources "/factions", FactionController
     resources "/users", UserController
   end
