@@ -1,8 +1,9 @@
 defmodule GameServer.Chunk do
   use GameServer.Web, :model
 
+  @primary_key {:address, :string, []}
+  @derive {Phoenix.Param, key: :address}
   schema "chunks" do
-    field :address, :string
 
     timestamps
   end

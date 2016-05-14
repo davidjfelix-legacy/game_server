@@ -3,7 +3,7 @@ defmodule GameServer.ChunkTest do
 
   alias GameServer.Chunk
 
-  @valid_attrs %{}
+  @valid_attrs %{address: "some content"}
   @invalid_attrs %{}
 
   test "changeset with valid attributes" do
